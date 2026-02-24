@@ -20,6 +20,11 @@ alter table inventory
 modify id int auto_increment;
 describe inventory;
 
+<<<<<<< HEAD
+=======
+select * from sales;	
+
+>>>>>>> a6065a2 (Saving local work before syncing with remote)
 CREATE TABLE sales (
     sale_id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT,
@@ -27,12 +32,28 @@ CREATE TABLE sales (
     category varchar(50),
     quantity INT,
     total_price DECIMAL(10, 2),
+<<<<<<< HEAD
     sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (product_id) REFERENCES inventory(id)
 );
+=======
+    profit DECIMAL(10, 2),
+    sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES inventory(id)
+);
+ALTER TABLE inventory MODIFY cost_price DECIMAL(10, 2);
+ALTER TABLE inventory MODIFY sell_price DECIMAL(10, 2);
+>>>>>>> a6065a2 (Saving local work before syncing with remote)
 
 alter table sales
 modify total_price int;
 
 
+<<<<<<< HEAD
+=======
+ALTER TABLE inventory MODIFY cost_price DECIMAL(10, 2);
+ALTER TABLE inventory MODIFY sell_price DECIMAL(10, 2);
+ALTER TABLE sales MODIFY total_price DECIMAL(10, 2);
+ALTER TABLE sales MODIFY profit DECIMAL(10, 2);
+>>>>>>> a6065a2 (Saving local work before syncing with remote)
 

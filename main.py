@@ -6,7 +6,11 @@ def connect_db():
             host="localhost",
             user="root",
             password="ace242633",
+<<<<<<< HEAD
             database="clothing_store"
+=======
+            database="clothing_store",
+>>>>>>> a6065a2 (Saving local work before syncing with remote)
         )
         return connect
     except mysql.connector.Error as err:
@@ -367,7 +371,11 @@ def inventory():
             break   
         else:
             print("Select an Option !!!")
+<<<<<<< HEAD
         return
+=======
+            return
+>>>>>>> a6065a2 (Saving local work before syncing with remote)
 
 # Main Menu
 while True:
